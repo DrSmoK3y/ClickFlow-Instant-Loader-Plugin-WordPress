@@ -271,5 +271,5 @@ alt-svc: h3=":443"; ma=86400
 
 ClickFlow Instant Loader is open-source software licensed under the **GNU General Public License v2.0 or later** (GPLv2+).
 
-Created & maintained by **DrSmoK3y** **Creativators**  .  
+Created & maintained by **DrSmoK3y** x **Team Creativators**.  
 Contributions, issues, and pull requests are warmly welcomed on [GitHub](https://github.com/DrSmoK3y/ClickFlow-Instant-Loader-Plugin-WordPress).

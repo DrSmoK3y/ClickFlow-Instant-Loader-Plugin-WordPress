@@ -144,10 +144,6 @@ ClickFlow has undergone rigorous security audits against real-world penetration 
    Logged-in user pages (`document.body.classList.contains('logged-in')`) or responses with `Cache-Control: private, no-store` are never stored in browser memory cache. Logging out (`/customer-logout/` or `action=logout`) completely flushes client RAM cache.
 4. **Exception Masking & Info Disclosure Defense:**
    All internal exceptions and database errors in auto-setup and Redis routines are logged to server `error_log()` with sanitized, generic messages sent to the client.
-5. **Detailed Security Reports:**
-   Full penetration testing audits and compliance verification are documented in:
-   - [`SECURITY-AUDIT.md`](./SECURITY-AUDIT.md) — Comprehensive A to Z security architecture manual.
-   - [`CLAUDE-SECURITY-AUDIT-REPORT.md`](./CLAUDE-SECURITY-AUDIT-REPORT.md) — Security audit resolutions and verification.
 
 ---
 
@@ -265,8 +261,6 @@ alt-svc: h3=":443"; ma=86400
 │   ├── readme.txt                  # WordPress.org standard metadata
 │   └── uninstall.php               # Clean removal hook
 │
-├── SECURITY-AUDIT.md               # Enterprise Security Architecture Manual (A to Z)
-├── CLAUDE-SECURITY-AUDIT-REPORT.md # Security Audit Q&A & Technical Proofs
 ├── README-ROMAN-URDU.md            # Complete Master Guide in Roman Urdu
 └── README.md                       # Main English GitHub Documentation
 ```
@@ -277,5 +271,5 @@ alt-svc: h3=":443"; ma=86400
 
 ClickFlow Instant Loader is open-source software licensed under the **GNU General Public License v2.0 or later** (GPLv2+).
 
-Created & maintained by **DrSmoK3y** and contributors.  
+Created & maintained by **DrSmoK3y** **Creativators**  .  
 Contributions, issues, and pull requests are warmly welcomed on [GitHub](https://github.com/DrSmoK3y/ClickFlow-Instant-Loader-Plugin-WordPress).

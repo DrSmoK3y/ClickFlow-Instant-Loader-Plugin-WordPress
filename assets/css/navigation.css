@@ -1,0 +1,61 @@
+/**
+ * ClickFlow - Instant Navigation Styles (v0.9.5 BETA)
+ * Hardware-accelerated top progress indicator and native View Transitions.
+ */
+
+#clickflow-progress-bar,
+#lm-inav-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #2563eb, #38bdf8, #818cf8);
+    z-index: 9999999;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
+    transition: width 0.18s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.22s ease-out;
+    pointer-events: none;
+    opacity: 0;
+    will-change: width, opacity;
+}
+
+/* Hard dismiss class to guarantee immediate removal */
+#clickflow-progress-bar.cf-done,
+#lm-inav-progress-bar.cf-done {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Native View Transitions API crossfade enhancements (Chrome, Edge, Safari 18+) */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.14s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accessibility / Screen Reader Hidden */
+.clickflow-sr-only,
+.lm-inav-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Accessibility / Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    #clickflow-progress-bar,
+    #lm-inav-progress-bar {
+        display: none !important;
+    }
+    ::view-transition-group(root),
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none !important;
+    }
+}
